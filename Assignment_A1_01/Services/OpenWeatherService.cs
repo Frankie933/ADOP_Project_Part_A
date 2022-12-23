@@ -16,7 +16,7 @@ namespace Assignment_A1_01.Services
         HttpClient httpClient = new HttpClient();
 
         // Your API Key
-        readonly string apiKey = ""; 
+        readonly string apiKey = "eee86395bdce14b3d962d5956193d800"; 
 
         public async Task<Forecast> GetForecastAsync(double latitude, double longitude)
         {
@@ -31,6 +31,15 @@ namespace Assignment_A1_01.Services
 
             //Convert WeatherApiData to Forecast using Linq.
             //Your code
+            //Hint: you will find 
+            //City: wd.city.name
+            //Daily forecast in wd.list, in an item in the list
+            //      Date and time in Unix timestamp: dt 
+            //      Temperature: main.temp
+            //      WindSpeed: wind.speed
+            //      Description:  first item in weather[].description
+            //      Icon:  $"http://openweathermap.org/img/w/{wdle.weather.First().icon}.png"   //NOTE: Not necessary, only if you like to use an icon
+
             var forecast = new Forecast(); //dummy to compile, replaced by your own code
             return forecast;
         }
