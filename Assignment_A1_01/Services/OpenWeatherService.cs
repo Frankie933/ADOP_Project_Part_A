@@ -16,7 +16,7 @@ namespace Assignment_A1_01.Services
         HttpClient httpClient = new HttpClient();
 
         // Your API Key
-        readonly string apiKey = "eee86395bdce14b3d962d5956193d800"; 
+        readonly string apiKey = ""; 
 
         public async Task<Forecast> GetForecastAsync(double latitude, double longitude)
         {
