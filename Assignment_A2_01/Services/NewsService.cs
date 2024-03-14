@@ -42,6 +42,9 @@ namespace Assignment_A2_01.Services
 
             //Convert Json to Object
             NewsApiData nd = await response.Content.ReadFromJsonAsync<NewsApiData>();
+
+
+
 #endif            
             return nd;
         }

@@ -23,6 +23,30 @@ namespace Assignment_A1_01
 
             //Your Code to present each forecast item in a grouped list
             Console.WriteLine($"Weather forecast for {forecast.City}");
+            
+          
+
+            var GroupForecast = forecast.Items.GroupBy(item => item.DateTime.Date);
+
+
+            foreach (var group in GroupForecast)
+            {
+
+
+                Console.WriteLine($"{group.Key:d}");
+
+                foreach (var i in group)
+                {
+
+                    Console.WriteLine($"Time: {i.DateTime:t}, Temperature: {i.Temperature}, Description: {i.Description}. Wind: {i.WindSpeed}m/s");
+                }
+
+
+
+            }
+        
+
+
         }
     }
 }
